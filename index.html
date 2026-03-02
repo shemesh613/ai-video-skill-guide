@@ -355,35 +355,31 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', Tahom
 <div class="section">
   <div class="section-header" onclick="toggleSection(this)">
     <span class="icon">📋</span>
-    <h2>דרישות מוקדמות</h2>
-    <span class="toggle">▶</span>
+    <h2>לפני שמתחילים — מה צריך?</h2>
+    <span class="toggle open">▶</span>
   </div>
-  <div class="section-body">
-    <h3 style="color:var(--purple); margin-bottom:12px;">תוכנות נדרשות</h3>
-    <table class="info-table">
-      <tr><th>תוכנה</th><th>תפקיד</th><th>הורדה</th></tr>
-      <tr><td><strong>Claude Code</strong></td><td>מנוע ההרצה הראשי</td><td><a href="https://docs.anthropic.com/en/docs/claude-code/overview">מדריך</a></td></tr>
-      <tr><td><strong>Node.js 18+</strong></td><td>סביבת ריצה</td><td><a href="https://nodejs.org">nodejs.org</a></td></tr>
-      <tr><td><strong>Google Chrome</strong></td><td>אוטומציה של Grok</td><td><a href="https://google.com/chrome">chrome</a></td></tr>
-      <tr><td><strong>ffmpeg</strong></td><td>עיבוד וידאו</td><td>הפקודה למטה ⬇️</td></tr>
-    </table>
-
-    <div class="code-wrap">
-      <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
-      <div class="code-block">winget install ffmpeg</div>
-    </div>
-
-    <h3 style="color:var(--purple); margin: 20px 0 12px;">מפתחות API (חינם)</h3>
-    <table class="info-table">
-      <tr><th>שירות</th><th>תפקיד</th><th>השגת מפתח</th></tr>
-      <tr><td><strong>Google Gemini</strong></td><td>יצירת תמונות סטוריבורד</td><td><a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a></td></tr>
-      <tr><td><strong>ElevenLabs</strong></td><td>קריינות + מוזיקה</td><td><a href="https://elevenlabs.io/app/developers/api-keys">elevenlabs.io/api-keys</a></td></tr>
-    </table>
-
-    <h3 style="color:var(--purple); margin: 20px 0 12px;">חשבון Grok (חינם)</h3>
-    <div class="tip">
-      <strong>⚡ Grok</strong> — היכנסי ל-<a href="https://grok.com" style="color:var(--green)">grok.com</a> עם חשבון X (טוויטר). ודאי גישה ל-<a href="https://grok.com/imagine" style="color:var(--green)">grok.com/imagine</a>.<br>
-      <small>יש מגבלה יומית — אם נגמרו קרדיטים, חכי ליום הבא</small>
+  <div class="section-body open">
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:12px; margin-bottom:16px;">
+      <a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" style="background:rgba(233,69,96,0.1);border:1px solid var(--accent);border-radius:10px;padding:14px;text-align:center;text-decoration:none;color:var(--text);transition:all 0.2s;">
+        <div style="font-size:2em;">🤖</div>
+        <div style="font-weight:bold;color:var(--accent);margin:4px 0;">Claude Code</div>
+        <div style="font-size:0.75em;color:var(--text2);">חשבון Pro / Max</div>
+      </a>
+      <a href="https://nodejs.org" target="_blank" style="background:rgba(0,210,211,0.1);border:1px solid var(--green);border-radius:10px;padding:14px;text-align:center;text-decoration:none;color:var(--text);transition:all 0.2s;">
+        <div style="font-size:2em;">⬢</div>
+        <div style="font-weight:bold;color:var(--green);margin:4px 0;">Node.js 18+</div>
+        <div style="font-size:0.75em;color:var(--text2);">nodejs.org</div>
+      </a>
+      <a href="https://google.com/chrome" target="_blank" style="background:rgba(162,155,254,0.1);border:1px solid var(--purple);border-radius:10px;padding:14px;text-align:center;text-decoration:none;color:var(--text);transition:all 0.2s;">
+        <div style="font-size:2em;">🌐</div>
+        <div style="font-weight:bold;color:var(--purple);margin:4px 0;">Chrome</div>
+        <div style="font-size:0.75em;color:var(--text2);">כבר מותקן?</div>
+      </a>
+      <div style="background:rgba(253,203,110,0.1);border:1px solid var(--gold);border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-size:2em;">🎥</div>
+        <div style="font-weight:bold;color:var(--gold);margin:4px 0;">ffmpeg</div>
+        <div style="font-size:0.75em;color:var(--text2);">ראי שלב 2 למטה</div>
+      </div>
     </div>
   </div>
 </div>
@@ -392,91 +388,68 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', Tahom
 <div class="section">
   <div class="section-header" onclick="toggleSection(this)">
     <span class="icon">🔧</span>
-    <h2>שלבי התקנה (7 שלבים)</h2>
-    <span class="toggle">▶</span>
+    <h2>התקנה — 3 שלבים פשוטים</h2>
+    <span class="toggle open">▶</span>
   </div>
-  <div class="section-body">
+  <div class="section-body open">
 
     <div class="step">
       <div class="step-num">1</div>
-      <strong>הורדת הקבצים</strong><br>
-      לחצי על כפתור ההורדה למעלה, וחלצי את ה-ZIP לתיקייה:
+      <strong>הורידי את ה-ZIP וחלצי</strong><br>
+      לחצי על כפתור ההורדה למעלה → חלצי לתיקייה:
       <div class="code-wrap">
         <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
         <div class="code-block">C:\Users\&lt;שם_משתמש&gt;\.claude\skills\</div>
       </div>
-      <small>החליפי &lt;שם_משתמש&gt; בשם המשתמש שלך ב-Windows</small>
+      <small style="color:var(--text2)">החליפי &lt;שם_משתמש&gt; בשם שלך. בסוף צריכות להיות 5 תיקיות בתוך skills.</small>
     </div>
 
     <div class="step">
       <div class="step-num">2</div>
-      <strong>התקנת תלויות Node — הסקיל הראשי</strong>
+      <strong>הדביקי את הפקודה הזו בטרמינל (פעם אחת)</strong><br>
+      <div style="color:var(--text2); margin: 6px 0;">מתקין הכל אוטומטי — ffmpeg + כל התלויות:</div>
       <div class="code-wrap">
         <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
-        <div class="code-block">cd ~/.claude/skills/disney-video-generator/scripts && npm install</div>
+        <div class="code-block">winget install ffmpeg && cd ~/.claude/skills && for d in */scripts; do echo "📦 Installing $d..." && (cd "$d" && npm install && cd ../..); done && echo "✅ Done!"</div>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">3</div>
-      <strong>התקנת תלויות — סקילים נלווים</strong>
-      <div class="code-wrap">
-        <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
-        <div class="code-block">cd ~/.claude/skills/nano-banana-poster/scripts && npm install
-cd ~/.claude/skills/speech-generator/scripts && npm install
-cd ~/.claude/skills/music-generator/scripts && npm install</div>
+      <strong>מפתחות API — לחצי, העתיקי, הדביקי</strong><br>
+      <div style="display:flex; gap:10px; margin:10px 0; flex-wrap:wrap;">
+        <a href="https://aistudio.google.com/apikey" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:rgba(0,210,211,0.1);border:1px solid var(--green);color:var(--green);padding:10px 18px;border-radius:8px;text-decoration:none;font-size:0.9em;font-weight:bold;">🔑 קבלי מפתח Gemini (חינם)</a>
+        <a href="https://elevenlabs.io/app/developers/api-keys" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:rgba(162,155,254,0.1);border:1px solid var(--purple);color:var(--purple);padding:10px 18px;border-radius:8px;text-decoration:none;font-size:0.9em;font-weight:bold;">🔑 קבלי מפתח ElevenLabs (חינם)</a>
       </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">4</div>
-      <strong>הגדרת מפתח Gemini</strong><br>
-      צרי קובץ <code style="background:#0d0d1a;padding:2px 6px;border-radius:4px;">.env</code> בתיקייה:
+      <div style="color:var(--text2); margin: 8px 0 4px;">אחרי שקיבלת מפתחות, פתחי Claude Code והדביקי:</div>
       <div class="code-wrap">
         <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
-        <div class="code-block">~/.claude/skills/nano-banana-poster/scripts/.env</div>
-      </div>
-      עם התוכן:
-      <div class="code-wrap">
-        <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
-        <div class="code-block">GEMINI_API_KEY=המפתח_שלך_מגוגל</div>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">5</div>
-      <strong>הגדרת מפתח ElevenLabs</strong><br>
-      צרי קובץ <code style="background:#0d0d1a;padding:2px 6px;border-radius:4px;">.env</code> בשתי תיקיות:
-      <div class="code-wrap">
-        <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
-        <div class="code-block">~/.claude/skills/speech-generator/scripts/.env
-~/.claude/skills/music-generator/scripts/.env</div>
-      </div>
-      עם התוכן:
-      <div class="code-wrap">
-        <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
-        <div class="code-block">ELEVENLABS_API_KEY=המפתח_שלך</div>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">6</div>
-      <strong>הגדרת פרופיל Chrome ל-Grok (פעם אחת)</strong>
-      <div class="code-wrap">
-        <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
-        <div class="code-block">"C:\Program Files\Google\Chrome\Application\chrome.exe" --user-data-dir="%LOCALAPPDATA%\Google\Chrome\GrokProfile2"</div>
+        <div class="code-block">תיצור קבצי .env בכל תיקיות scripts בתוך ~/.claude/skills — מפתח Gemini: [הדביקי כאן] מפתח ElevenLabs: [הדביקי כאן]</div>
       </div>
       <div class="tip">
-        <strong>💡</strong> בחלון Chrome שנפתח: היכנסי ל-grok.com עם חשבון X, ודאי גישה ל-grok.com/imagine, וסגרי. הפרופיל שומר cookies — לא צריך להתחבר שוב.
+        <strong>💡</strong> Claude Code יודע בדיוק איפה לשים כל מפתח. פשוט הדביקי את המפתחות במשפט.
       </div>
     </div>
 
-    <div class="step">
-      <div class="step-num">7</div>
-      <strong>בדיקה שהכל מותקן</strong>
-      <div class="code-wrap">
-        <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
-        <div class="code-block">node --version && ffmpeg -version && ls ~/.claude/skills/disney-video-generator/skill.md && echo "✅ הכל מותקן!"</div>
+    <div style="background:linear-gradient(135deg, #11998e, #38ef7d); border-radius:12px; padding:20px; text-align:center; color:white; margin-top:20px;">
+      <div style="font-size:1.4em; font-weight:bold;">🎯 וזהו — 3 שלבים וסיימת!</div>
+      <div style="margin-top:8px; opacity:0.9;">עכשיו כתבי ב-Claude Code:</div>
+      <div class="usage-cmd" onclick="navigator.clipboard.writeText('תעשי לי סרטון דיסני');this.textContent='✅ הועתק!';setTimeout(()=>{this.textContent='🏰 תעשי לי סרטון דיסני';},1500)" style="background:rgba(0,0,0,0.25);padding:10px 20px;border-radius:8px;display:inline-block;margin-top:8px;cursor:pointer;">🏰 תעשי לי סרטון דיסני</div>
+    </div>
+
+    <details style="margin-top:16px; cursor:pointer;">
+      <summary style="color:var(--text2); font-size:0.85em;">⚙️ Grok — הגדרה חד-פעמית (רק אם האנימציה לא עובדת)</summary>
+      <div style="padding:12px 0;">
+        <div style="color:var(--text2); font-size:0.85em; margin-bottom:8px;">אם Grok לא מצליח להתחבר, הריצי פעם אחת:</div>
+        <div class="code-wrap">
+          <button class="copy-btn" onclick="copyCode(this)">📋 העתק</button>
+          <div class="code-block">"C:\Program Files\Google\Chrome\Application\chrome.exe" --user-data-dir="%LOCALAPPDATA%\Google\Chrome\GrokProfile2"</div>
+        </div>
+        <div style="color:var(--text2); font-size:0.85em;">בחלון שנפתח → grok.com → היכנסי עם חשבון X → סגרי. פעם אחת בלבד.</div>
+      </div>
+    </details>
+
+  </div>
       </div>
     </div>
 
